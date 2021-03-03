@@ -5,10 +5,13 @@ docker commands:
 docker build -t seanmac/node-web-app .
 
 #to deploy container based on above image, run 
-docker run -it -p 9000:8080 -v $(pwd):/app seanmac/node-web-app
+docker stop puppysite
+docker rm puppysite
+docker run -it -p 9000:8080 --name puppysite -v $(pwd):/app seanmac/node-web-app
 #in background
 docker run -it -d -p 9000:8080 -v $(pwd):/app seanmac/node-web-app
 
+#TODO: get full CI/CD setup https://docs.docker.com/language/nodejs/develop/
 
 #to display all images run this
 docker images
