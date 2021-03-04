@@ -1,4 +1,4 @@
-# website for selling puppies
+# Website for selling puppies <insert permalink here>
 
 docker commands: 
 to (re)build image from a Dockerfile run this 
@@ -20,6 +20,7 @@ to run in background
 #TODO: get full CI/CD setup https://docs.docker.com/language/nodejs/develop/
 
 #TODO: create react front end
+
 #TODO: create docker-compose file for react, express and mongodb 
 
 to display all images run this
@@ -27,9 +28,13 @@ to display all images run this
 
 to run the image and display stuff to web browser run this. -p redirects public port to private port inside docker container 
 `docker run -it -p 9000:8080 seanmac/node-web-app`
+
 to get docker containers ID run 
 `docker ps`
+
 to get logs, run
 `docker logs <container id>`
+
 to enter the container run 
 `docker exec -it <container id> /bin/bash`
+
