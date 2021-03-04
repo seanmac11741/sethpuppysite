@@ -2,17 +2,23 @@
 
 docker commands: 
 to (re)build image from a Dockerfile run this 
+
 `docker build -t seanmac/node-web-app .`
 
 to deploy container based on above image, run 
+
 `docker stop puppysite`
+
 `docker rm puppysite`
+
 `docker run -it -p 9000:8080 --name puppysite -v $(pwd):/app seanmac/node-web-app`
 
 to run in background
+
 `docker run -it -d -p 9000:8080 -v $(pwd):/app seanmac/node-web-app`
 
 #TODO: get full CI/CD setup https://docs.docker.com/language/nodejs/develop/
+
 #TODO: create react front end
 #TODO: create docker-compose file for react, express and mongodb 
 
